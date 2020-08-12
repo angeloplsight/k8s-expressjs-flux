@@ -3,9 +3,6 @@ apiVersion: helm.fluxcd.io/v1
 kind: HelmRelease
 metadata:
   name: expressjs-k8s
-  annotations:
-    fluxcd.io/automated: "true"
-    filter.fluxcd.io/chart-image: semver:~0.3
 spec:
   chart:
     repository: https://alexellis.github.io/expressjs-k8s/
@@ -14,4 +11,4 @@ spec:
   values:
     ingress:
       enabled: false
-    image: alexellis2/service:0.3.7
+    image: alexellis2/service:0.3.6
